@@ -25,5 +25,7 @@ npm run build   # üretim derlemesi
 2. Dosyayı `public/models/hero.glb` olarak koy.
 3. `components/Scene.tsx` içinde `<Rings />` yerine `useGLTF("/models/hero.glb")` ile yüklenen sahneyi kullan.
 
-## Yayın
-Vercel'e bağlı: `main` dalına her push otomatik yayına çıkar.
+## Yayın (Cloudflare Pages)
+Statik export: `npm run build` → `out/` klasörü.
+Cloudflare Pages ayarları: Framework preset **Next.js (Static HTML Export)**, build komutu `npm run build`, çıktı klasörü `out`.
+`main` dalına her push otomatik yayına çıkar.
